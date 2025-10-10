@@ -1,7 +1,9 @@
 """Test module for the main functionality."""
 
-import pytest
 from unittest.mock import patch
+
+import pytest
+
 from exploration_sequential_testing import main
 
 
@@ -23,12 +25,12 @@ def test_dummy_calculation():
     # Test basic arithmetic
     assert 1 + 1 == 2
     assert 5 * 3 == 15
-    
+
     # Test list operations
     test_list = [1, 2, 3]
     assert len(test_list) == 3
     assert test_list[0] == 1
-    
+
     # Test string operations
     test_string = "Hello World"
     assert test_string.lower() == "hello world"
@@ -39,6 +41,6 @@ def test_dummy_exception_handling():
     """Dummy test to demonstrate exception testing."""
     with pytest.raises(ZeroDivisionError):
         _ = 1 / 0
-    
+
     with pytest.raises(TypeError):
         _ = "string" + 5
