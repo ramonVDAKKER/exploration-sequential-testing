@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Streamlit",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${workspaceFolder}/src/exploration_sequential_testing/visualization/dashboard/app.py",
+                "--server.port=8000"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+    ]
+}
