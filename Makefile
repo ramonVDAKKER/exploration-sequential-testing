@@ -7,4 +7,4 @@ test:
 	uv run pytest
 
 dashboard:
-	uv run streamlit run src/exploration_sequential_testing/visualization/dashboard/app.py
+	uv run streamlit run src/exploration_sequential_testing/dashboard/app.py

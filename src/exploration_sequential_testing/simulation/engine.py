@@ -149,7 +149,9 @@ class MonteCarloEngine:
                 future_iterator = as_completed(futures)
                 if verbose:
                     future_iterator = tqdm(
-                        future_iterator, total=config.n_simulations, desc="Running simulations"
+                        future_iterator,
+                        total=config.n_simulations,
+                        desc="Running simulations",
                     )
 
                 for future in future_iterator:

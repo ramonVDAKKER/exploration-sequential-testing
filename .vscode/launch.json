@@ -8,7 +8,7 @@
             "module": "streamlit",
             "args": [
                 "run",
-                "${workspaceFolder}/src/exploration_sequential_testing/visualization/dashboard/app.py",
+                "${workspaceFolder}/src/exploration_sequential_testing/dashboard/app.py",
                 "--server.port=8000"
             ],
             "console": "integratedTerminal",
