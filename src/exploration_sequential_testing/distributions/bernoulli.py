@@ -3,7 +3,10 @@
 import numpy as np
 from pydantic import Field, field_validator
 
-from exploration_sequential_testing.distributions.base import Distribution, DistributionParams
+from exploration_sequential_testing.distributions.base import (
+    Distribution,
+    DistributionParams,
+)
 
 
 class BernoulliParams(DistributionParams):
@@ -26,6 +29,7 @@ class BernoulliParams(DistributionParams):
 
 class BernoulliDistribution(Distribution):
     """Bernoulli distribution for binary outcome sequential testing."""
+
     def __init__(self, params: BernoulliParams):
         """Initialize Bernoulli distribution.
 
@@ -96,7 +100,7 @@ class BernoulliDistribution(Distribution):
 
     def to_dict(self) -> dict[str, any]:
         """Serialize distribution to dictionary.
-        
+
         Returns:
             Dictionary compatible with DistributionFactory.create()
         """
@@ -105,5 +109,5 @@ class BernoulliDistribution(Distribution):
         return result
 
     def __repr__(self) -> str:
-        """String representation."""
+        """Return string representation."""
         return f"BernoulliDistribution(p={self.params.p:.4f})"

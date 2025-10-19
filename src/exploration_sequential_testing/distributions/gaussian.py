@@ -3,7 +3,10 @@
 import numpy as np
 from pydantic import Field
 
-from exploration_sequential_testing.distributions.base import Distribution, DistributionParams
+from exploration_sequential_testing.distributions.base import (
+    Distribution,
+    DistributionParams,
+)
 
 
 class GaussianParams(DistributionParams):
@@ -105,7 +108,7 @@ class GaussianDistribution(Distribution):
 
     def to_dict(self) -> dict[str, any]:
         """Serialize distribution to dictionary.
-        
+
         Returns:
             Dictionary compatible with DistributionFactory.create()
         """
@@ -114,5 +117,5 @@ class GaussianDistribution(Distribution):
         return result
 
     def __repr__(self) -> str:
-        """String representation."""
+        """Return string representation."""
         return f"GaussianDistribution(mean={self.params.mean:.4f}, std={self.params.std:.4f})"
