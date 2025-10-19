@@ -1,5 +1,7 @@
 """Gaussian (Normal) distribution for sequential testing."""
 
+from typing import Any
+
 import numpy as np
 from pydantic import Field
 
@@ -106,7 +108,7 @@ class GaussianDistribution(Distribution):
         """Return distribution name."""
         return "Gaussian"
 
-    def to_dict(self) -> dict[str, any]:
+    def to_dict(self) -> dict[str, Any]:
         """Serialize distribution to dictionary.
 
         Returns:

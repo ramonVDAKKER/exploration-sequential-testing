@@ -8,11 +8,11 @@ from exploration_sequential_testing.distributions.bernoulli import (
     BernoulliDistribution,
     BernoulliParams,
 )
+from exploration_sequential_testing.distributions.factory import DistributionFactory
 from exploration_sequential_testing.distributions.gaussian import (
     GaussianDistribution,
     GaussianParams,
 )
-from exploration_sequential_testing.distributions.factory import DistributionFactory
 
 __all__ = [
     "Distribution",

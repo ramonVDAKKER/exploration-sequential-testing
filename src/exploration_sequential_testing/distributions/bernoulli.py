@@ -1,5 +1,7 @@
 """Bernoulli distribution for sequential testing."""
 
+from typing import Any
+
 import numpy as np
 from pydantic import Field, field_validator
 
@@ -98,7 +100,7 @@ class BernoulliDistribution(Distribution):
         """Return distribution name."""
         return "Bernoulli"
 
-    def to_dict(self) -> dict[str, any]:
+    def to_dict(self) -> dict[str, Any]:
         """Serialize distribution to dictionary.
 
         Returns:

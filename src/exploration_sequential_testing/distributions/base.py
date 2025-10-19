@@ -58,9 +58,7 @@ class Distribution(ABC):
 
     @abstractmethod
     def log_likelihood_ratio(
-        self,
-        data: np.ndarray,
-        alt_params: DistributionParams
+        self, data: np.ndarray, alt_params: DistributionParams
     ) -> float:
         """Compute log-likelihood ratio between alternative and current (null) params.
 
@@ -88,7 +86,7 @@ class Distribution(ABC):
         Returns:
             Dictionary compatible with DistributionFactory.create().
             Format: {"type": "...", "param1": ..., "param2": ...}
-            
+
         Note:
             Subclasses should override this to provide the correct type key.
         """
